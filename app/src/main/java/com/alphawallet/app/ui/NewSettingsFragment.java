@@ -63,7 +63,6 @@ public class NewSettingsFragment extends BaseFragment
     private NewSettingsViewModel viewModel;
     private LinearLayout walletSettingsLayout;
     private LinearLayout systemSettingsLayout;
-    private LinearLayout supportSettingsLayout;
     private SettingsItemView myAddressSetting;
     private SettingsItemView changeWalletSetting;
     private SettingsItemView backUpWalletSetting;
@@ -74,7 +73,6 @@ public class NewSettingsFragment extends BaseFragment
     private SettingsItemView selectNetworksSetting;
     private SettingsItemView advancedSetting;
     private SettingsItemView darkModeSetting;
-    private SettingsItemView supportSetting;
     private SettingsItemView walletConnectSetting;
     private SettingsItemView showSeedPhrase;
     private SettingsItemView nameThisWallet;
@@ -254,7 +252,6 @@ public class NewSettingsFragment extends BaseFragment
     {
         walletSettingsLayout = view.findViewById(R.id.layout_settings_wallet);
         systemSettingsLayout = view.findViewById(R.id.layout_settings_system);
-        supportSettingsLayout = view.findViewById(R.id.layout_settings_support);
         updateLayout = view.findViewById(R.id.layout_update);
 
         myAddressSetting =
@@ -344,20 +341,12 @@ public class NewSettingsFragment extends BaseFragment
                         .withTitle(R.string.title_dark_mode)
                         .withListener(this::onDarkModeSettingClicked)
                         .build();
-
-        supportSetting =
-                new SettingsItemView.Builder(getContext())
-                        .withIcon(R.drawable.ic_settings_support)
-                        .withTitle(R.string.title_support)
-                        .withListener(this::onSupportSettingClicked)
-                        .build();
     }
 
     private void addSettingsToLayout()
     {
         int walletIndex = 0;
         int systemIndex = 0;
-        int supportIndex = 0;
 
         walletSettingsLayout.addView(myAddressSetting, walletIndex++);
 
@@ -388,8 +377,6 @@ public class NewSettingsFragment extends BaseFragment
         systemSettingsLayout.addView(darkModeSetting, systemIndex++);
 
         systemSettingsLayout.addView(advancedSetting, systemIndex++);
-
-        supportSettingsLayout.addView(supportSetting, supportIndex++);
     }
 
     private void setInitialSettingsData(View view)
@@ -637,12 +624,6 @@ public class NewSettingsFragment extends BaseFragment
     private void onDarkModeSettingClicked()
     {
         Intent intent = new Intent(getActivity(), SelectThemeActivity.class);
-        startActivity(intent);
-    }
-
-    private void onSupportSettingClicked()
-    {
-        Intent intent = new Intent(getActivity(), SupportSettingsActivity.class);
         startActivity(intent);
     }
 

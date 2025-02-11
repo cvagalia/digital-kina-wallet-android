@@ -12,6 +12,7 @@ public class CurrencyRepository implements CurrencyRepositoryType {
      * Find drawables here - https://github.com/Shusshu/android-flags/tree/master/flags/src/main/res/drawable
      */
     public static final CurrencyItem[] CURRENCIES = {
+            new CurrencyItem("PGK", "Papua New Guinea Kina", "K", R.drawable.ic_flags_papua_new_guinea),
             new CurrencyItem("USD", "American Dollar", "$", R.drawable.ic_flags_usa),
             new CurrencyItem("EUR", "Euro", "€", R.drawable.ic_flags_euro),
             new CurrencyItem("GBP", "British Pound", "£", R.drawable.ic_flags_uk),

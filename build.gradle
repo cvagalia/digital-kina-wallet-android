@@ -30,6 +30,6 @@ plugins {
 
 configurations.configureEach {
     resolutionStrategy {
-        force 'com.google.firebase:firebase-analytics:16.5.0'
+        force 'com.google.firebase:firebase-analytics:21.5.1'  // Update to match version in libs.versions.toml
     }
 }

@@ -49,17 +49,6 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical" />
 
-            <com.alphawallet.app.widget.StandardHeader
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                custom:headerText="@string/support" />
-
-            <LinearLayout
-                android:id="@+id/layout_settings_support"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" />
-
             <RelativeLayout
                 android:id="@+id/layout_version"
                 android:layout_width="match_parent"
